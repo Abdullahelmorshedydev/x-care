@@ -1,11 +1,12 @@
 import "./navbar.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-export default function Navbar() {
+import { FaSearch, FaShoppingBag, FaArrowUp } from "react-icons/fa";
+
+export default function Navbar(activeLi) {
   return (
     <nav>
       <ul>
         <li>
-          <a href="">Home</a>
+          <a href="" className={activeLi == 'home' ? 'active' : ''}>Home</a>
         </li>
         <li>
           <a href="">Pages</a>
@@ -25,8 +26,8 @@ export default function Navbar() {
       </ul>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20%"
-        height="65%"
+        width="25%"
+        height="60%"
         viewBox="0 0 371.92 135.52"
       >
         <title>logo</title>
@@ -60,8 +61,24 @@ export default function Navbar() {
         ></path>
       </svg>
       <div className="rightNav">
-        <i class="pbmit-base-icon-search-1"></i>
-        {/* <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> */}
+        <div className="icons">
+          <div className="icon">
+            <FaSearch />
+          </div>
+          <div className="icon">
+            <FaShoppingBag />
+            <span className="cart_count">0</span>
+          </div>
+        </div>
+        <button>
+          <span>Make An Appointment</span>
+          <i className="arrow1">
+            <FaArrowUp />
+          </i>
+          <i className="arrow2">
+            <FaArrowUp />
+          </i>
+        </button>
       </div>
     </nav>
   );

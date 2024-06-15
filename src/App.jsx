@@ -44,3 +44,4 @@ export default function App() {
 // npm i swiper
 // npm i wowjs
 // npm i animate.css --save
+// npm install react-icons --save

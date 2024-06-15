@@ -1,9 +1,11 @@
 import Navbar from "../../components/Navbar/Navbar";
+import Title from "../../components/Title/Title";
 import "./index.scss";
 export default function HomePage() {
   return (
     <div id="Homepage">
-      <Navbar />
+      <Title title="Home Page"/>
+      <Navbar activeLi="home" />
       Home Page
     </div>
   );
