@@ -6,7 +6,9 @@ export default function Navbar(activeLi) {
     <nav>
       <ul>
         <li>
-          <a href="" className={activeLi == 'home' ? 'active' : ''}>Home</a>
+          <a href="" className={activeLi == "home" ? "active" : ""}>
+            Home
+          </a>
         </li>
         <li>
           <a href="">Pages</a>
@@ -72,10 +74,7 @@ export default function Navbar(activeLi) {
         </div>
         <button>
           <span>Make An Appointment</span>
-          <i className="arrow1">
-            <FaArrowUp />
-          </i>
-          <i className="arrow2">
+          <i className="arrow">
             <FaArrowUp />
           </i>
         </button>

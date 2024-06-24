@@ -62,21 +62,19 @@ nav {
       align-items: center;
       .icon {
         width: 60px;
-        height: 50px;
+        height: 60px;
         background-color: white;
         border-radius: 50%;
-        padding: 5px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-content: center;
         justify-content: center;
         align-items: center;
-        padding-left: 33px;
+        padding-left: 50px;
         transition: all 0.4s ease;
         svg {
-          width: 60%;
-          height: 60%;
+          width: 140%;
         }
         .cart_count {
           width: 20px;
@@ -116,55 +114,38 @@ nav {
       text-transform: uppercase;
       color: #f0f7fd;
       padding: 12px 20px;
-      .arrow1 {
+      .arrow {
         svg {
           transform: rotate(45deg);
-          margin-left: 10px;
-          transition: all 0.5s ease-in-out;
-        }
-      }
-      .arrow2 {
-        display: none;
-        svg {
-          transform: rotate(45deg);
-          margin-left: 10px;
+          margin-left: 20px;
           transition: all 0.5s ease-in-out;
         }
       }
       &:hover {
         background-color: #3368c6;
         border: 1px solid #3368c6;
-        .arrow1 {
+        .arrow {
           svg {
-            animation: moveArrow 1s;
-          }
-        }
-        .arrow2 {
-          svg {
-            animation: moveArrowBack 1s;
+            animation: moveOut 2s;
           }
         }
       }
     }
   }
 }
-
-@keyframes moveArrow {
+@keyframes moveOut {
   0% {
-    transform: rotate(45deg) translate(0, 0);
+    left: 0;
   }
   100% {
-    transform: rotate(45deg) translate(-50px, 50px);
-    display: none;
+    left: 100%;
   }
 }
-
-@keyframes moveArrowBack {
+@keyframes moveIn {
   0% {
-    display: block;
-    transform: rotate(45deg) translate(50px, -50px);
+    left: 80px;
   }
   100% {
-    transform: rotate(45deg) translate(0, 0);
+    left: 0;
   }
 }
